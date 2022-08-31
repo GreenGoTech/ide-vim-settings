@@ -1,0 +1,57 @@
+{
+  "python.setLinter": ["mypy"],
+  "python.linting.enabled": false,
+  "python.linting.mypyEnabled": true,
+  "python.sortImports.path": "isort",
+  "python.linting.flake8Enabled": true,
+  "python.venvPath": "${env:HOME}/.pyenv/versions",
+  "python.formatting.provider": "black",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "Markdown",
+    "python",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "graphql",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "golang"
+  ],
+  "languageserver": {
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": ["server", "-m", "stream"],
+      "trace.server": "verbose",
+      "filetypes": [
+        "typescript",
+        "typescriptreact",
+        "graphql",
+        "javascript",
+        "javascriptreact"
+      ]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    },
+    "sql": {
+      "command": "sql-language-server",
+      "args": ["up", "--method", "stdio"],
+      "filetypes": ["sql", "mysql"]
+    },
+    "terraform": {
+      "command": "terraform-lsp",
+      "filetypes": ["terraform"],
+      "initializationOptions": {}
+    }
+  }
+}

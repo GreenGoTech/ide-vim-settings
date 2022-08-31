@@ -1,0 +1,59 @@
+" == General editor plugins ==
+Plug 'neomake/neomake'
+Plug 'chriskempson/base16-vim'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
+Plug 'moll/vim-bbye'
+Plug 'mileszs/ack.vim'
+Plug 'kshenoy/vim-signature'
+Plug 'junegunn/vim-emoji'
+
+" === Usefull tooling ===
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-repeat'
+Plug 'jiangmiao/auto-pairs'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'itchyny/lightline.vim'
+
+" == Autocomplete plugins ==
+""Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"let g:deoplete#enable_at_startup = 1
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<C-y>"
+
+
+" == Front ==
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'digitaltoad/vim-pug'
+Plug 'groenewege/vim-less'
+Plug 'kchmck/vim-coffee-script'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+Plug 'ruanyl/vim-fixmyjs'
+Plug 'posva/vim-vue'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
+Plug 'alunny/pegjs-vim'
+
+" === Backend ===
+
+Plug 'jparise/vim-graphql'
+Plug 'vim-scripts/lua.vim--Ko'
+Plug 'xolox/vim-lua-ftplugin'
+Plug 'fatih/vim-go'
+"Plug 'zchee/deoplete-go'
+Plug 'hashivim/vim-terraform'
+Plug 'cespare/vim-toml'
+Plug 'sebdah/vim-delve'
+
+
+" == Infra ===
+Plug 'vim-scripts/SQLComplete.vim'
+Plug 'exu/pgsql.vim'
+Plug 'spacewander/openresty-vim'
+
